@@ -12,8 +12,11 @@ function App() {
           <img src="/nombre.png" alt="AerostAI Technik" className="nombre" />
         </a>
         <ul className="nav-links">
+          <li><a href="#industrias">Industrias</a></li>
           <li><a href="#especializacion">Soluciones</a></li>
+          <li><a href="#plataformas">Plataformas</a></li>
           <li><a href="#mision-vision">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -44,6 +47,19 @@ function App() {
       </section>
 
       {/* CONTENIDO QUE SUBE SOBRE EL FONDO ESTATICO */}
+
+      <section className="section" id="industrias">
+        <div className="section-inner">
+          <div className="section-header">
+            <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Sectores que Transformamos</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Nuestras Industrias</motion.h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', marginTop: '1.5rem', textAlign: 'center' }}>
+              [ PRÓXIMAMENTE: Contenido sobre industrias Aeronáutica, Oil & Gas y Energía... ]
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="especializacion">
         <div className="section-inner">
           <div className="section-header">
@@ -100,6 +116,18 @@ function App() {
         </div>
       </section>
 
+      <section className="section" id="plataformas">
+        <div className="section-inner">
+          <div className="section-header">
+            <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Tecnología de Vanguardia</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Plataformas y Productos</motion.h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', marginTop: '1.5rem', textAlign: 'center' }}>
+              [ PRÓXIMAMENTE: Catálogo interactivo de plataformas de monitoreo y software... ]
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="mision-vision">
         <div className="section-inner">
           <div className="grid-2">
@@ -117,6 +145,18 @@ function App() {
                 <span style={{ color: 'var(--text-muted)' }}>Impulsar operaciones más inteligentes, eficientes y seguras a través de tecnología diseñada con el más alto rigor ingenieril.</span>
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="proyectos">
+        <div className="section-inner">
+          <div className="section-header">
+            <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Ejecución con Precisión</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Casos de Éxito</motion.h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', marginTop: '1.5rem', textAlign: 'center' }}>
+              [ PRÓXIMAMENTE: Registro de proyectos implementados y casos de estudio... ]
+            </p>
           </div>
         </div>
       </section>
