@@ -41,7 +41,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background: transparent !important;
+    background: #040806 !important;
   }
 
   body::before {
@@ -53,8 +53,9 @@ body {
     height: 100%;
     background-image: url('/fondo.png');
     background-size: cover;
-    background-position: center;
-    z-index: -2;
+    /* Back to cover but with better body background */
+    background-position: center top;
+    z-index: -1;
   }
 }
 
@@ -98,26 +99,43 @@ body {
     padding: 0 1rem;
     height: 60px;
     justify-content: center;
-    /* Centramos logo/nombre en móvil */
-    background: rgba(4, 8, 6, 0.95);
+    background: rgba(4, 9, 6, 0.98);
+    display: flex !important;
+    z-index: 2000;
+  }
+
+  .nav-brand {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2001;
+  }
+
+  .nav-brand img.logo,
+  .nav-brand img.nombre {
+    height: 30px !important;
+    width: auto !important;
+    display: block !important;
   }
 
   .nav-links {
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: rgba(8, 15, 12, 0.98);
-    backdrop-filter: blur(20px);
-    display: flex;
+    width: 100%;
+    background: rgba(6, 12, 9, 0.98);
+    backdrop-filter: blur(25px);
+    display: flex !important;
     justify-content: flex-start;
-    /* Permite scroll si hay muchos */
-    overflow-x: auto;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    /* Deslizamiento suave en iOS */
     white-space: nowrap;
-    padding: 0.8rem 1rem;
-    gap: 1rem;
+    padding: 12px 15px;
+    gap: 12px;
     border-top: 1px solid var(--border-light);
-    z-index: 100;
+    z-index: 3000;
     scrollbar-width: none;
   }
 
@@ -125,13 +143,18 @@ body {
     display: none;
   }
 
-  .nav-links a {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
-    text-align: center;
-    background: rgba(16, 185, 129, 0.05);
-    border-radius: 4px;
+  .nav-links li {
     flex-shrink: 0;
+    display: block !important;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+    text-align: center;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 6px;
+    color: #FAFAFA;
   }
 }
 
