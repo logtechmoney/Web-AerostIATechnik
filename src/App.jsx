@@ -23,8 +23,10 @@ function App() {
         {/* El fondo ESTATICO ahora está configurado sobre la etiqueta BODY global para el parallax puro */}
         <div className="hero-overlay"></div>
 
+        <video src="/video.mp4" autoPlay loop muted playsInline className="hero-video" />
+
+        {/*
         <div className="hero-lockup">
-          {/* ANIMACION DE LOGO ENORME ARRIBA DEL NOMBRE */}
           <motion.img
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -42,6 +44,7 @@ function App() {
             className="nombre"
           />
         </div>
+        */}
       </section>
 
       {/* CONTENIDO QUE SUBE SOBRE EL FONDO ESTATICO */}
