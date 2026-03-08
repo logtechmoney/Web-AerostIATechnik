@@ -7,7 +7,10 @@ function App() {
   const [activeSection, setActiveSection] = useState('inicio');
 
   useEffect(() => {
-    // RESET SCROLL AL INICIO AL RECARGAR (Práctica profesional para landing pages)
+    // FORCE RESET SCROLL TO TOP ON REFRESH
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
     window.scrollTo(0, 0);
 
     const observer = new IntersectionObserver((entries) => {
