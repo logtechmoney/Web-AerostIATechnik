@@ -146,12 +146,11 @@ body {
 
 /* LOGO ENORME ARRIBA */
 .hero-lockup img.logo {
-  height: 650px;
-  /* TAMAÑO AUN MAS IMPONENTE */
+  height: 400px;
+  /* TAMAÑO IMPONENTE COMO ANTES */
   width: auto;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.9));
-  margin-bottom: -160px;
-  /* Super pegado al nombre eliminando paddings */
+  margin-bottom: 0;
   position: relative;
   z-index: 5;
 }
@@ -163,28 +162,30 @@ body {
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.9));
   position: relative;
   z-index: 10;
+  margin-top: -100px;
+  /* Sube el nombre justo pegado sin deformar el logo */
 }
 
 /* RESPONSIVE PARA EL HERO IMPONENTE */
 @media (max-width: 1024px) {
   .hero-lockup img.logo {
-    height: 450px;
-    margin-bottom: -110px;
+    height: 300px;
   }
 
   .hero-lockup img.nombre {
     height: 90px;
+    margin-top: -70px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-lockup img.logo {
-    height: 300px;
-    margin-bottom: -70px;
+    height: 200px;
   }
 
   .hero-lockup img.nombre {
     height: 60px;
+    margin-top: -50px;
   }
 }
 
