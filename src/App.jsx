@@ -1,28 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal } from 'lucide-react';
 import './index.css';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('inicio');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { threshold: 0.3 }); // Activa cuando el 30% está en pantalla
+
+    const sections = ['inicio', 'industrias', 'especializacion', 'plataformas', 'mision-vision', 'proyectos', 'contacto'];
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <nav className="navbar">
-        <a href="#" className="nav-brand">
+        <a href="#inicio" className="nav-brand">
           <img src="/logo.png" alt="AerostAI Technik Logo" className="logo" />
           <img src="/nombre.png" alt="AerostAI Technik" className="nombre" />
         </a>
         <ul className="nav-links">
-          <li><a href="#industrias">Industrias</a></li>
-          <li><a href="#especializacion">Soluciones</a></li>
-          <li><a href="#plataformas">Plataformas</a></li>
-          <li><a href="#mision-vision">Nosotros</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio" className={activeSection === 'inicio' ? 'active' : ''}>Inicio</a></li>
+          <li><a href="#industrias" className={activeSection === 'industrias' ? 'active' : ''}>Industrias</a></li>
+          <li><a href="#especializacion" className={activeSection === 'especializacion' ? 'active' : ''}>Soluciones</a></li>
+          <li><a href="#plataformas" className={activeSection === 'plataformas' ? 'active' : ''}>Plataformas</a></li>
+          <li><a href="#mision-vision" className={activeSection === 'mision-vision' ? 'active' : ''}>Nosotros</a></li>
+          <li><a href="#proyectos" className={activeSection === 'proyectos' ? 'active' : ''}>Proyectos</a></li>
+          <li><a href="#contacto" className={activeSection === 'contacto' ? 'active' : ''}>Contacto</a></li>
         </ul>
       </nav>
 
       {/* SECCION HERO TOTALMENTE CENTRADA E IMPONENTE */}
-      <section className="hero-section">
+      <section className="hero-section" id="inicio">
         {/* El fondo ESTATICO ahora está configurado sobre la etiqueta BODY global para el parallax puro */}
         <div className="hero-overlay"></div>
 
