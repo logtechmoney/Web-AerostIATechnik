@@ -7,6 +7,9 @@ function App() {
   const [activeSection, setActiveSection] = useState('inicio');
 
   useEffect(() => {
+    // RESET SCROLL AL INICIO AL RECARGAR (Práctica profesional para landing pages)
+    window.scrollTo(0, 0);
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -14,7 +17,8 @@ function App() {
         }
       });
     }, {
-      rootMargin: '-15% 0% -75% 0%', // Detecta la sección que entra en el tercio superior
+      // Ajuste de margen para detectar mejor la sección activa al centro de la pantalla
+      rootMargin: '-20% 0% -60% 0%',
       threshold: 0
     });
 
