@@ -204,8 +204,8 @@ body {
 
 /* SECCIONES DE CONTENIDO QUE DESLIZAN SOBRE EL FONDO ESTATICO */
 .section {
-  padding: 10rem 4rem;
-  /* Más aire para que el scrollspy sea preciso */
+  padding: 6rem 4rem;
+  /* Reducido para que no sea eterno bajando */
   background-color: #040806;
   border-bottom: 1px solid rgba(5, 150, 105, 0.1);
   position: relative;
@@ -369,7 +369,7 @@ body {
   /* Muy importante para el efecto beam */
 }
 
-/* EFECTO LUZ QUE CIRCULA (BORDER BEAM) */
+/* EFECTO LUZ QUE CIRCULA (BORDER BEAM) SIEMPRE ACTIVO */
 .card::before,
 .mv-box::before {
   content: '';
@@ -378,14 +378,21 @@ body {
   /* Supera ligeramente el borde */
   background: conic-gradient(from 0deg,
       var(--accent-bright) 0deg,
-      var(--accent-bright) 45deg,
-      transparent 60deg,
+      var(--accent-bright) 35deg,
+      transparent 50deg,
       transparent 360deg);
   border-radius: 9px;
-  animation: rotate 3s linear infinite;
-  opacity: 0;
+  animation: rotate 4s linear infinite;
+  opacity: 0.45;
+  /* Luz tenue pero constante */
   transition: opacity 0.4s ease;
   z-index: 0;
+}
+
+.card:hover::before,
+.mv-box:hover::before {
+  opacity: 1;
+  /* Brilla mas cuando pasas el mouse */
 }
 
 @keyframes rotate {
@@ -427,13 +434,9 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-12px) scale(1.02);
-  border-color: rgba(5, 150, 105, 0.5);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-}
-
-.card:hover::before {
-  opacity: 1;
+  transform: translateY(-8px);
+  border-color: rgba(5, 150, 105, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 .card-icon {

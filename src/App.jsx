@@ -117,31 +117,33 @@ function App() {
         <div className="section-inner">
           <div className="section-header">
             <motion.h3
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-150px" }}
               transition={{ duration: 0.3 }}
               className="section-title-sm"
+              style={{ fontSize: '0.8rem', letterSpacing: '0.2em', marginBottom: '0.5rem' }}
             >
               Ingeniería de Software para Entornos Críticos
             </motion.h3>
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-150px" }}
               transition={{ duration: 0.3, delay: 0.05 }}
               className="section-title"
+              style={{ fontSize: '2rem', marginBottom: '1rem' }}
             >
               Soluciones Escalables Inteligentes
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-150px" }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginTop: '1.5rem', maxWidth: '850px', margin: '1.5rem auto 0 auto', textAlign: 'center' }}
+              style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', maxWidth: '650px', margin: '0 auto', textAlign: 'center' }}
             >
-              Transformamos la complejidad técnica en ventaja estratégica. Desarrollamos ecosistemas digitales seguros, alineados con protocolos internacionales y transformando entornos aislados en procesos centralizados.
+              Transformamos complejidad técnica en ventaja estratégica mediante ecosistemas digitales seguros y procesos centralizados de alto rendimiento.
             </motion.p>
           </div>
 
@@ -149,6 +151,7 @@ function App() {
             className="solutions-slider-wrapper"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            style={{ marginTop: '2.5rem' }}
           >
             {/* Nav ultra compacta y profesional */}
             <div className="solutions-minimal-nav">
@@ -168,17 +171,17 @@ function App() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, x: 30, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, x: -30, filter: 'blur(10px)' }}
-                  transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                  initial={{ opacity: 0, filter: 'blur(8px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(8px)' }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                   className="card sol-modern-card"
                 >
                   <div className="card-inner-flex">
-                    <div className="card-icon">{soluciones[activeTab].icon}</div>
+                    <div className="card-icon" style={{ color: 'rgba(16, 185, 129, 0.6)' }}>{soluciones[activeTab].icon}</div>
                     <div className="card-content">
-                      <h3 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: '#FAFAFA' }}>{soluciones[activeTab].title}</h3>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.6' }}>
+                      <h3 style={{ fontSize: '1.35rem', marginBottom: '0.75rem', color: '#FAFAFA', fontWeight: '500' }}>{soluciones[activeTab].title}</h3>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.5' }}>
                         {soluciones[activeTab].desc}
                       </p>
                     </div>
