@@ -23,15 +23,16 @@ function App() {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="brand">
+          <a href="#" className="brand">
             <img src="/logo.png" alt="AerostAI Technik Logo" className="logo" />
             <img src="/nombre.png" alt="AerostAI Technik" className="nombre" />
-          </div>
-          <div>
-            <a href="#soluciones" className="btn btn-primary">
-              Descubrir Soluciones
-            </a>
-          </div>
+          </a>
+          <ul className="nav-links">
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#mision-vision">Misión y Visión</a></li>
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="mailto:info-support@aerostaitechnik.com" className="btn btn-outline">Contacto</a></li>
+          </ul>
         </div>
       </nav>
 
@@ -39,14 +40,14 @@ function App() {
       <section className="hero">
         <div className="container">
           <div className="hero-content fade-in">
-            <img src="/logo.png" alt="AerostAI Technik Logo" style={{ height: '160px', width: 'auto', marginBottom: '1.5rem', filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.5))' }} />
-            <img src="/nombre.png" alt="AerostAI Technik" style={{ maxWidth: '90%', height: 'auto', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))' }} />
+            <img src="/logo.png" alt="AerostAI Technik Logo" style={{ height: '180px', width: 'auto', marginBottom: '1.5rem', filter: 'drop-shadow(0 4px 20px rgba(16, 185, 129, 0.15))' }} />
+            <img src="/nombre.png" alt="AerostAI Technik" style={{ maxWidth: '90%', height: 'auto', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.8))' }} />
           </div>
         </div>
       </section>
 
-      {/* Sobre Nosotros - Dark Mode */}
-      <section className="section" id="sobre-nosotros" style={{ background: '#0B0E14' }}>
+      {/* Sobre Nosotros - Dark Mode with tech green hues */}
+      <section className="section" id="sobre-nosotros" style={{ background: '#060B09' }}>
         <div className="container animate-on-scroll">
           <div className="section-header" style={{ marginBottom: '3rem' }}>
             <h2 className="section-title">Sobre Nosotros</h2>
@@ -64,8 +65,8 @@ function App() {
             </p>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-            <h3 style={{ fontSize: '1.125rem', marginBottom: '2rem', fontWeight: '500', color: '#94A3B8' }}>Nos especializamos en:</h3>
+          <div style={{ textAlign: 'center', marginTop: '5rem' }}>
+            <h3 style={{ fontSize: '1.125rem', marginBottom: '2.5rem', fontWeight: '500', color: '#8AA39B' }}>Especialización Técnica:</h3>
             <div className="pills-container">
               {[
                 "Sistemas MRO aeronáuticos",
@@ -85,7 +86,7 @@ function App() {
       </section>
 
       {/* Misión y Visión Split */}
-      <section className="section" id="mision-vision" style={{ background: '#090B10' }}>
+      <section className="section" id="mision-vision" style={{ background: '#0A120E' }}>
         <div className="container">
           <div className="split-section">
             <div className="split-card animate-on-scroll">
@@ -97,7 +98,7 @@ function App() {
                 Garantizamos seguridad operacional, integridad de la información y continuidad operativa mediante arquitecturas tecnológicas robustas, seguras y escalables.
               </p>
               <div className="split-icon">
-                <Target size={56} color="#64748B" strokeWidth={1.5} />
+                <Target size={56} color="#10B981" strokeWidth={1} style={{ filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.4))' }} />
               </div>
             </div>
 
@@ -110,7 +111,7 @@ function App() {
                 Impulsar operaciones más inteligentes, eficientes y seguras a través de tecnología diseñada con rigor ingenieril.
               </p>
               <div className="split-icon">
-                <Eye size={56} color="#64748B" strokeWidth={1.5} />
+                <Eye size={56} color="#10B981" strokeWidth={1} style={{ filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.4))' }} />
               </div>
             </div>
           </div>
@@ -118,7 +119,7 @@ function App() {
       </section>
 
       {/* Problemas que Resolvemos */}
-      <section className="section" style={{ background: '#0B0E14' }}>
+      <section className="section" style={{ background: '#060B09' }}>
         <div className="container animate-on-scroll">
           <div className="section-header">
             <h2 className="section-title">Problemas que Resolvemos</h2>
@@ -127,9 +128,9 @@ function App() {
             </p>
           </div>
 
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h3 style={{ textAlign: 'center', marginBottom: '2rem', fontWeight: 500, color: '#E2E8F0' }}>
-              Por lo que identificamos y resolvemos problemáticas como:
+          <div style={{ maxWidth: '950px', margin: '0 auto', marginTop: '3rem' }}>
+            <h3 style={{ textAlign: 'center', marginBottom: '2.5rem', fontWeight: 500, color: '#E2E8F0', letterSpacing: '0.02em' }}>
+              Identificamos y superamos limitantes operativos:
             </h3>
             <ul className="problems-list">
               {[
@@ -143,7 +144,7 @@ function App() {
                 "Falta de análisis predictivo"
               ].map((problem, idx) => (
                 <li key={idx} className="animate-on-scroll" style={{ animationDelay: `${idx * 50}ms` }}>
-                  <XCircle color="#64748B" size={20} />
+                  <XCircle color="#10B981" size={20} strokeWidth={1.5} />
                   <span>{problem}</span>
                 </li>
               ))}
@@ -153,7 +154,7 @@ function App() {
       </section>
 
       {/* Nuestras Soluciones */}
-      <section className="section" id="soluciones" style={{ background: '#090B10' }}>
+      <section className="section" id="soluciones" style={{ background: '#0A120E' }}>
         <div className="container animate-on-scroll">
           <div className="section-header">
             <h2 className="section-title">Nuestras Soluciones</h2>
@@ -194,7 +195,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer using clean dark colors matching the site */}
+      {/* Footer using clean dark software colors */}
       <footer className="footer">
         <div className="container">
           <div className="footer-brand">
@@ -203,11 +204,11 @@ function App() {
           </div>
 
           <p className="footer-text">
-            Convertimos operaciones complejas en ecosistemas digitales integrados, seguros y preparados para crecer.
+            Convertimos operaciones complejas en ecosistemas digitales integrados, seguros y preparados para escalar.
           </p>
 
           <div className="footer-contact">
-            <span style={{ color: '#64748B', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contacto</span>
+            <span style={{ color: '#8AA39B', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Contacto Directo</span>
             <a href="mailto:info-support@aerostaitechnik.com">info-support@aerostaitechnik.com</a>
           </div>
 
