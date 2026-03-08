@@ -1,20 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal } from 'lucide-react';
 import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [activeTab, setActiveTab] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const timerRef = useRef(null);
 
   const soluciones = [
-    { title: "Sistemas MRO Aeronáuticos", icon: <Terminal size={48} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
-    { title: "Engine Condition Monitoring", icon: <Cpu size={48} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
-    { title: "Gestión Aeroportuaria", icon: <Blocks size={48} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
-    { title: "Plataformas de Datos", icon: <Database size={48} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
-    { title: "Drones & Oil/Gas", icon: <Cloud size={48} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
-    { title: "Seguridad y Cumplimiento", icon: <Shield size={48} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
+    { id: "mro", short: "MRO Aeronáutico", title: "Sistemas MRO Aeronáuticos", icon: <Terminal size={40} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
+    { id: "ecm", short: "Engine Monitoring", title: "Engine Condition Monitoring", icon: <Cpu size={40} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
+    { id: "airport", short: "Gestión Aeroportuaria", title: "Gestión Aeroportuaria", icon: <Blocks size={40} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
+    { id: "data", short: "Data Platforms", title: "Plataformas de Datos", icon: <Database size={40} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
+    { id: "drones", short: "Drones & Energy", title: "Drones & Oil/Gas", icon: <Cloud size={40} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
+    { id: "safety", short: "Seguridad & Compliance", title: "Seguridad y Cumplimiento", icon: <Shield size={40} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
   ];
+
+  // CAROUSEL AUTOMATICO (FOQUITO QUE PASA SOLO)
+  useEffect(() => {
+    if (!isHovered) {
+      timerRef.current = setInterval(() => {
+        setActiveTab((prev) => (prev + 1) % soluciones.length);
+      }, 5000); // Cambia cada 5 segundos
+    }
+    return () => clearInterval(timerRef.current);
+  }, [isHovered, soluciones.length]);
 
   useEffect(() => {
     // FORCE RESET SCROLL TO TOP ON REFRESH
@@ -133,34 +145,46 @@ function App() {
             </motion.p>
           </div>
 
-          <div className="solutions-tabs-container">
-            <div className="solutions-nav">
+          <div
+            className="solutions-slider-wrapper"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {/* Nav ultra compacta y profesional */}
+            <div className="solutions-minimal-nav">
               {soluciones.map((sol, index) => (
                 <button
                   key={index}
-                  className={`sol-nav-item ${activeTab === index ? 'active' : ''}`}
+                  className={`sol-dot-item ${activeTab === index ? 'active' : ''}`}
                   onClick={() => setActiveTab(index)}
                 >
-                  {sol.title}
+                  <span className="dot"></span>
+                  <span className="label">{sol.short}</span>
                 </button>
               ))}
             </div>
 
-            <div className="solutions-display">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="card sol-active-card"
-              >
-                <div className="card-icon">{soluciones[activeTab].icon}</div>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: '#FAFAFA' }}>{soluciones[activeTab].title}</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '700px', margin: '0 auto' }}>
-                  {soluciones[activeTab].desc}
-                </p>
-              </motion.div>
+            <div className="solutions-viewport">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial={{ opacity: 0, x: 30, filter: 'blur(10px)' }}
+                  animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, x: -30, filter: 'blur(10px)' }}
+                  transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                  className="card sol-modern-card"
+                >
+                  <div className="card-inner-flex">
+                    <div className="card-icon">{soluciones[activeTab].icon}</div>
+                    <div className="card-content">
+                      <h3 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: '#FAFAFA' }}>{soluciones[activeTab].title}</h3>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.6' }}>
+                        {soluciones[activeTab].desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
