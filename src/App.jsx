@@ -12,9 +12,9 @@ function App() {
           <img src="/nombre.png" alt="AerostAI Technik" className="nombre" />
         </a>
         <ul className="nav-links">
-          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#especializacion">Soluciones</a></li>
           <li><a href="#mision-vision">Nosotros</a></li>
-          <li><a href="mailto:info-support@aerostaitechnik.com">Contacto</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
@@ -121,7 +121,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">
+      <footer className="footer" id="contacto">
         <img src="/nombre.png" alt="AerostAI Technik" style={{ height: '35px', opacity: 0.6 }} />
         <p style={{ marginTop: '2rem', fontSize: '1.2rem', color: '#E5E5E5' }}>Contacto Corporativo: <a href="mailto:info-support@aerostaitechnik.com" style={{ color: 'var(--accent)', marginLeft: '0.8rem', fontWeight: 600 }}>info-support@aerostaitechnik.com</a></p>
         <p style={{ marginTop: '3.5rem', opacity: 0.4, fontSize: '0.95rem' }}>&copy; {new Date().getFullYear()} AerostAI TECHNIK. Todos los derechos reservados.</p>
