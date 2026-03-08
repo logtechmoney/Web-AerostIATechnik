@@ -23,7 +23,15 @@ function App() {
         {/* El fondo ESTATICO ahora está configurado sobre la etiqueta BODY global para el parallax puro */}
         <div className="hero-overlay"></div>
 
-        <video src="/video.mp4" autoPlay loop muted playsInline className="hero-video" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="hero-video-wrapper"
+        >
+          <video src="/video.mp4" autoPlay loop muted playsInline className="hero-video" />
+          <div className="hero-video-tint"></div>
+        </motion.div>
 
         {/*
         <div className="hero-lockup">
