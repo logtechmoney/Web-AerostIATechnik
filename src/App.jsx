@@ -5,6 +5,16 @@ import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('inicio');
+  const [activeTab, setActiveTab] = useState(0);
+
+  const soluciones = [
+    { title: "Sistemas MRO Aeronáuticos", icon: <Terminal size={48} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
+    { title: "Engine Condition Monitoring", icon: <Cpu size={48} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
+    { title: "Gestión Aeroportuaria", icon: <Blocks size={48} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
+    { title: "Plataformas de Datos", icon: <Database size={48} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
+    { title: "Drones & Oil/Gas", icon: <Cloud size={48} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
+    { title: "Seguridad y Cumplimiento", icon: <Shield size={48} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
+  ];
 
   useEffect(() => {
     // FORCE RESET SCROLL TO TOP ON REFRESH
@@ -123,27 +133,35 @@ function App() {
             </motion.p>
           </div>
 
-          <div className="grid-3">
-            {[
-              { title: "Sistemas MRO Aeronáuticos", icon: <Terminal size={48} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa." },
-              { title: "Engine Condition Monitoring", icon: <Cpu size={48} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas." },
-              { title: "Gestión Aeroportuaria", icon: <Blocks size={48} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura." },
-              { title: "Plataformas de Datos", icon: <Database size={48} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones." },
-              { title: "Drones & Oil/Gas", icon: <Cloud size={48} strokeWidth={1.5} />, desc: "Software crítico automatizado para industria energética exigiendo máxima precisión." },
-              { title: "Seguridad y Cumplimiento", icon: <Shield size={48} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial." },
-            ].map((item, i) => (
+          <div className="solutions-tabs-container">
+            <div className="solutions-nav">
+              {soluciones.map((sol, index) => (
+                <button
+                  key={index}
+                  className={`sol-nav-item ${activeTab === index ? 'active' : ''}`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  {sol.title}
+                </button>
+              ))}
+            </div>
+
+            <div className="solutions-display">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-150px" }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="card" key={i}
+                key={activeTab}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="card sol-active-card"
               >
-                <div className="card-icon">{item.icon}</div>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1.5rem', color: '#FAFAFA' }}>{item.title}</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.7' }}>{item.desc}</p>
+                <div className="card-icon">{soluciones[activeTab].icon}</div>
+                <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: '#FAFAFA' }}>{soluciones[activeTab].title}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '700px', margin: '0 auto' }}>
+                  {soluciones[activeTab].desc}
+                </p>
               </motion.div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

@@ -246,10 +246,61 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+/* TABS DE SOLUCIONES (Ahorro de espacio) */
+.solutions-tabs-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.solutions-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.sol-nav-item {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--text-muted);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sol-nav-item:hover {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--text-main);
+}
+
+.sol-nav-item.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.solutions-display {
+  width: 100%;
+  max-width: 850px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.sol-active-card {
+  width: 100%;
+  padding: 5rem 4rem !important;
+  /* Más espacio interno para que respire */
+  cursor: default !important;
 }
 
 .grid-2 {
