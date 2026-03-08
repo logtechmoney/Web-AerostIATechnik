@@ -140,23 +140,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  /* Separacion perfecta */
+  gap: 0;
   width: 100%;
 }
 
 /* LOGO ENORME ARRIBA */
 .hero-lockup img.logo {
-  height: 350px;
-  /* TAMAÑO IMPONENTE */
+  height: 500px;
+  /* TAMAÑO AUN MAS IMPONENTE */
   width: auto;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.9));
+  margin-bottom: -50px;
+  /* Super pegado al nombre */
 }
 
 /* NOMBRE GRANDE ABAJO */
 .hero-lockup img.nombre {
   height: 120px;
-  /* INCREMENTADO PARA HACER MATCH */
   width: auto;
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.9));
 }
@@ -164,7 +164,8 @@ body {
 /* RESPONSIVE PARA EL HERO IMPONENTE */
 @media (max-width: 1024px) {
   .hero-lockup img.logo {
-    height: 260px;
+    height: 350px;
+    margin-bottom: -30px;
   }
 
   .hero-lockup img.nombre {
@@ -174,7 +175,8 @@ body {
 
 @media (max-width: 768px) {
   .hero-lockup img.logo {
-    height: 180px;
+    height: 220px;
+    margin-bottom: -15px;
   }
 
   .hero-lockup img.nombre {
