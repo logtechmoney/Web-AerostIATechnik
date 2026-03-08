@@ -53,9 +53,11 @@ body {
     height: 100%;
     background-image: url('/fondo.png');
     background-size: cover;
-    /* Back to cover but with better body background */
-    background-position: center top;
+    background-position: 70% center;
+    /* Ajuste para que se vea la parte importante en mobile */
     z-index: -1;
+    opacity: 0.6;
+    /* Un poco mas tenue para que se note mejor el logo */
   }
 }
 
