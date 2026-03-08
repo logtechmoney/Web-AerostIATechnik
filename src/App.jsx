@@ -13,7 +13,10 @@ function App() {
           setActiveSection(entry.target.id);
         }
       });
-    }, { threshold: 0.3 }); // Activa cuando el 30% está en pantalla
+    }, {
+      rootMargin: '-15% 0% -75% 0%', // Detecta la sección que entra en el tercio superior
+      threshold: 0
+    });
 
     const sections = ['inicio', 'industrias', 'especializacion', 'plataformas', 'mision-vision', 'proyectos', 'contacto'];
     sections.forEach(id => {
