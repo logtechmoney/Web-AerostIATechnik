@@ -90,7 +90,8 @@ function App() {
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ duration: 0.3 }}
               className="section-title-sm"
             >
               Ingeniería de Software para Entornos Críticos
@@ -98,8 +99,8 @@ function App() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ duration: 0.3, delay: 0.05 }}
               className="section-title"
             >
               Soluciones Escalables Inteligentes
@@ -107,8 +108,8 @@ function App() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginTop: '1.5rem', maxWidth: '850px', margin: '1.5rem auto 0 auto', textAlign: 'center' }}
             >
               Transformamos la complejidad técnica en ventaja estratégica. Desarrollamos ecosistemas digitales seguros, alineados con protocolos internacionales y transformando entornos aislados en procesos centralizados.
@@ -125,10 +126,10 @@ function App() {
               { title: "Seguridad y Cumplimiento", icon: <Shield size={48} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial." },
             ].map((item, i) => (
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
                 className="card" key={i}
               >
                 <div className="card-icon">{item.icon}</div>
@@ -143,8 +144,8 @@ function App() {
       <section className="section" id="plataformas">
         <div className="section-inner">
           <div className="section-header">
-            <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Tecnología de Vanguardia</motion.h3>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Plataformas y Productos</motion.h2>
+            <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} className="section-title-sm">Tecnología de Vanguardia</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ delay: 0.05, duration: 0.3 }} className="section-title">Plataformas y Productos</motion.h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', marginTop: '1.5rem', textAlign: 'center' }}>
               [ PRÓXIMAMENTE: Catálogo interactivo de plataformas de monitoreo y software... ]
             </p>
@@ -155,14 +156,14 @@ function App() {
       <section className="section" id="mision-vision">
         <div className="section-inner">
           <div className="grid-2">
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mv-box">
+            <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} className="mv-box">
               <h3 className="section-title-sm" style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>Nuestra Misión</h3>
               <p style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2.5rem', lineHeight: '1.8' }}>
                 Diseñar y desarrollar soluciones de ingeniería de software para los sectores aeronáutico y Oil & Gas, integrando datos críticos y optimizando procesos para fortalecer la toma de decisiones.<br /><br />
                 <span style={{ color: 'var(--text-muted)' }}>Garantizamos seguridad operacional e integridad mediante arquitecturas tecnológicas robustas, seguras y escalables.</span>
               </p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mv-box">
+            <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3, delay: 0.1 }} className="mv-box">
               <h3 className="section-title-sm" style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>Nuestra Visión</h3>
               <p style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2.5rem', lineHeight: '1.8' }}>
                 Ser una empresa referente en ingeniería de software aplicada a entornos de alta exigencia técnica, reconocida por desarrollar soluciones precisas y confiables.<br /><br />
