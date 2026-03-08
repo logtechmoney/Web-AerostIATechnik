@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #080808;
+  --bg-dark: #050a07;
+  /* Tono muy oscuro pero verdoso ("software") en lugar de negro puro */
   --text-main: #EDEDED;
-  --text-muted: #A3A3A3;
-  --accent: #A8B598;
-  /* Profesional: Verdosos tirando a beige/arena/oliva */
-  --border-light: rgba(168, 181, 152, 0.15);
-  --glass-bg: rgba(12, 12, 12, 0.85);
+  --text-muted: #8ba89f;
+  /* Gris texturizado con verde */
+  --accent: #10B981;
+  /* Verde esmeralda software/matrix brillante */
+  --border-light: rgba(16, 185, 129, 0.2);
+  --glass-bg: rgba(6, 15, 10, 0.85);
+  /* Cristal verdoso oscuro */
+  --glow-shadow: 0 0 25px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.05);
 }
 
 * {
@@ -111,8 +115,9 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
   color: #FAFAFA;
-  background-color: rgba(168, 181, 152, 0.15);
-  /* Acento "arena/verdoso" sutil */
+  background-color: rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3), inset 0 0 5px rgba(16, 185, 129, 0.15);
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
 }
 
 /* HERO SECTION - TOTALMENTE CENTRADO E IMPONENTE */
@@ -128,14 +133,14 @@ body {
   overflow: hidden;
 }
 
-/* OVERLAY OSCURO PARA QUE EL LOGO RESALTE MUCHO */
+/* OVERLAY OSCURO CON TINTE VERDE SOFTWARE PARA QUE RESALTE MUCHO */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(5, 5, 5, 0.65);
+  background: linear-gradient(135deg, rgba(3, 8, 5, 0.8) 0%, rgba(6, 15, 10, 0.55) 100%);
   z-index: -1;
 }
 
@@ -197,8 +202,8 @@ body {
 /* SECCIONES DE CONTENIDO QUE DESLIZAN SOBRE EL FONDO ESTATICO */
 .section {
   padding: 8rem 4rem;
-  background-color: rgba(6, 6, 6, 0.95);
-  /* Color pleno semi-transparente oscuro */
+  background-color: rgba(5, 12, 8, 0.96);
+  /* Un negro-verdoso más claro en lugar de gris muerto */
   border-bottom: 1px solid var(--border-light);
   position: relative;
   z-index: 10;
@@ -264,14 +269,15 @@ body {
   border-radius: 8px;
   transition: all 0.3s;
   text-align: center;
+  position: relative;
   /* ALINEADO AL CENTRO */
 }
 
 .card:hover {
-  background: rgba(20, 20, 20, 0.98);
+  background: rgba(9, 20, 14, 0.98);
   border-color: var(--accent);
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--glow-shadow);
 }
 
 .card-icon {
@@ -292,14 +298,17 @@ body {
 }
 
 .mv-box:hover {
-  border-color: rgba(168, 181, 152, 0.5);
+  border-color: var(--accent);
+  box-shadow: var(--glow-shadow);
+  transform: translateY(-5px);
 }
 
 .footer {
   padding: 6rem 4rem 4rem 4rem;
   text-align: center;
   border-top: 1px solid var(--border-light);
-  background: rgba(4, 4, 4, 0.98);
+  background: rgba(4, 9, 6, 0.98);
+  /* Verde ultra oscuro */
   position: relative;
   z-index: 10;
 }
