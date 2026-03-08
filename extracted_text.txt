@@ -1,0 +1,50 @@
+ 
+Sobre Nosotros
+Somos una empresa tecnológica especializada en el desarrollo de soluciones de ingeniería de software para industrias críticas. Nuestro equipo está conformado por Ingenieros Aeronáuticos y Desarrolladores con experiencia directa en entornos industriales. Esta integración nos permite comprender los desafíos operativos desde la ingeniería y traducirlos en soluciones tecnológicas concretas, sin intermediaciones ni largas etapas de interpretación técnica.
+Con experiencia en los sectores aeronáutico, de petroleo y energético, diseñamos plataformas digitales que integran datos, procesos y sistemas para optimizar operaciones, fortalecer la toma de decisiones y garantizar eficiencia y continuidad operativa.
+Desarrollamos soluciones escalables, seguras y alineadas con estándares internacionales, transformando la complejidad técnica en ventaja estratégica.
+Nos especializamos en:
+Sistemas MRO aeronáuticos
+Engine Condition Trend Monitoring
+Software crítico industrial
+Plataformas inteligentes de datos
+Plataformas inteligentes en servicio de Drones
+Automatización operativa con IA
+Misión
+Diseñar y desarrollar soluciones de ingeniería de software para los sectores aeronáutico y Oil & Gas, integrando datos críticos y optimizando procesos para fortalecer la toma de decisiones.
+Garantizamos seguridad operacional, integridad de la información y continuidad operativa mediante arquitecturas tecnológicas robustas, seguras y escalables.
+Visión
+Ser una empresa referente en ingeniería de software aplicada a entornos de alta exigencia técnica, reconocida por desarrollar soluciones precisas, confiables y alineadas con las necesidades reales de la operación.
+Impulsar operaciones más inteligentes, eficientes y seguras a través de tecnología diseñada con rigor ingenieril.
+Problemas que Resolvemos
+En industrias donde la precisión, la seguridad y el cumplimiento no son opcionales, la tecnología no puede fallar.
+Las organizaciones de la industria aeronáutica, aeroportuaria, aerolíneas, aviación general y sector energético enfrentan desafíos crecientes en entornos altamente regulados y de operación crítica.
+Por lo que identificamos y resolvemos problemáticas como:
+Falta de integración entre sistemas críticos
+Dependencia de procesos manuales
+Riesgos regulatorios y de cumplimiento
+Baja visibilidad en tiempo real
+Limitaciones de sistemas heredados
+     Limitaciones en Seguridad operacional 
+    Limitaciones en  ciberseguridad
+Falta de análisis predictivo
+Nuestro enfoque
+Transformamos entornos tecnológicos fragmentados en ecosistemas digitales integrados, seguros y preparados para operar bajo los más altos estándares de exigencia.
+Nuestras Soluciones
+Desarrollamos soluciones digitales diseñadas para entornos donde la seguridad, la continuidad operativa y el cumplimiento normativo son factores estratégicos
+Desarrollo de Software a Medida
+, 
+Diseñamos plataformas escalables e integradas con los sistemas existentes, automatizando procesos críticos y centralizando la información operativa
+Sistemas de Gestión Aeroportuaria,
+ 
+Soluciones para la planificación, coordinación y monitoreo en tiempo real de operaciones aeroportuarias.
+Plataformas para Aerolíneas, 
+Sistemas orientados a planificación, mantenimiento, logística y gestión de datos críticos de operación.
+Soluciones para Aviación General,
+ 
+Digitalización y profesionalización de operaciones, mantenimiento y gestión administrativa.
+Software para Industria Petrolera, Energética y Drones
+, 
+Sistemas para gestión de activos, mantenimiento, logística y monitoreo en entornos de alta exigencia.
+Nuestro Compromiso
+Convertimos operaciones complejas en ecosistemas digitales integrados, seguros y preparados para crecer.
