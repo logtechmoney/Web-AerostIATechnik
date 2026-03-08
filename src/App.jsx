@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal } from 'lucide-react';
+import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal, Menu, X } from 'lucide-react';
 import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [activeTab, setActiveTab] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const timerRef = useRef(null);
 
   const soluciones = [
@@ -17,6 +18,15 @@ function App() {
     { id: "drones", short: "Drones & Energy", title: "Drones & Oil/Gas", icon: <Cloud size={40} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
     { id: "safety", short: "Seguridad & Compliance", title: "Seguridad y Cumplimiento", icon: <Shield size={40} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
   ];
+
+  // EVITAR SCROLL CUANDO EL MENU ESTA ABIERTO
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
 
   // CAROUSEL AUTOMATICO (FOQUITO QUE PASA SOLO)
   useEffect(() => {
@@ -59,18 +69,27 @@ function App() {
   return (
     <>
       <nav className="navbar">
-        <a href="#inicio" className="nav-brand">
+        <a href="#inicio" className="nav-brand" onClick={() => setIsMobileMenuOpen(false)}>
           <img src="/logo.png" alt="AerostAI Technik Logo" className="logo" />
           <img src="/nombre.png" alt="AerostAI Technik" className="nombre" />
         </a>
-        <ul className="nav-links">
-          <li><a href="#inicio" className={activeSection === 'inicio' ? 'active' : ''}>Inicio</a></li>
-          <li><a href="#industrias" className={activeSection === 'industrias' ? 'active' : ''}>Industrias</a></li>
-          <li><a href="#especializacion" className={activeSection === 'especializacion' ? 'active' : ''}>Soluciones</a></li>
-          <li><a href="#plataformas" className={activeSection === 'plataformas' ? 'active' : ''}>Plataformas</a></li>
-          <li><a href="#mision-vision" className={activeSection === 'mision-vision' ? 'active' : ''}>Nosotros</a></li>
-          <li><a href="#proyectos" className={activeSection === 'proyectos' ? 'active' : ''}>Proyectos</a></li>
-          <li><a href="#contacto" className={activeSection === 'contacto' ? 'active' : ''}>Contacto</a></li>
+
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Menú"
+        >
+          {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+
+        <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
+          <li><a href="#inicio" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'inicio' ? 'active' : ''}>Inicio</a></li>
+          <li><a href="#industrias" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'industrias' ? 'active' : ''}>Industrias</a></li>
+          <li><a href="#especializacion" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'especializacion' ? 'active' : ''}>Soluciones</a></li>
+          <li><a href="#plataformas" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'plataformas' ? 'active' : ''}>Plataformas</a></li>
+          <li><a href="#mision-vision" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'mision-vision' ? 'active' : ''}>Nosotros</a></li>
+          <li><a href="#proyectos" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'proyectos' ? 'active' : ''}>Proyectos</a></li>
+          <li><a href="#contacto" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'contacto' ? 'active' : ''}>Contacto</a></li>
         </ul>
       </nav>
 
