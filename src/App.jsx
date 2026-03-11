@@ -207,24 +207,31 @@ function App() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, filter: 'blur(8px)' }}
-                  animate={{ opacity: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, filter: 'blur(8px)' }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  initial={{ opacity: 0, y: 10, filter: 'blur(5px)' }}
+                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: -10, filter: 'blur(5px)' }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="card sol-modern-card"
                 >
-                  <div className="card-inner-flex">
+                  <div className={`card-inner-flex ${soluciones[activeTab].image ? 'has-image' : ''}`}>
                     {soluciones[activeTab].image && (
-                      <div className="card-image-container">
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                        className="card-image-container"
+                      >
+                        <div className="image-overlay-scanline"></div>
                         <img src={soluciones[activeTab].image} alt={soluciones[activeTab].title} className="card-image" />
-                      </div>
+                        <div className="image-glow-accent"></div>
+                      </motion.div>
                     )}
                     <div className="card-content">
                       <div className="card-title-row">
-                        <div className="card-icon" style={{ color: 'rgba(16, 185, 129, 0.6)' }}>{soluciones[activeTab].icon}</div>
-                        <h3 style={{ fontSize: '1.35rem', color: '#FAFAFA', fontWeight: '500' }}>{soluciones[activeTab].title}</h3>
+                        <div className="card-icon" style={{ color: 'var(--accent-bright)' }}>{soluciones[activeTab].icon}</div>
+                        <h3 style={{ fontSize: '1.6rem', color: '#FAFAFA', fontWeight: '600', letterSpacing: '-0.02em' }}>{soluciones[activeTab].title}</h3>
                       </div>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginTop: '1.25rem' }}>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.7', marginTop: '1.25rem' }}>
                         {soluciones[activeTab].desc}
                       </p>
                     </div>
