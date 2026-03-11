@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal, Menu, X } from 'lucide-react';
+import { Shield, Cpu, Cloud, Target, Database, Blocks, Terminal, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './index.css';
 
 function App() {
@@ -189,18 +189,29 @@ function App() {
             onMouseLeave={() => setIsHovered(false)}
             style={{ marginTop: '2.5rem' }}
           >
-            {/* Nav ultra compacta y profesional */}
-            <div className="solutions-minimal-nav">
-              {soluciones.map((sol, index) => (
-                <button
-                  key={index}
-                  className={`sol-dot-item ${activeTab === index ? 'active' : ''}`}
-                  onClick={() => setActiveTab(index)}
+            <div className="catalog-header">
+              <h4 className="catalog-subtitle">Explorador de Soluciones</h4>
+              <div className="catalog-controls">
+                <button 
+                  className="catalog-btn" 
+                  onClick={() => setActiveTab((prev) => (prev === 0 ? soluciones.length - 1 : prev - 1))}
+                  aria-label="Anterior"
                 >
-                  <span className="dot"></span>
-                  <span className="label">{sol.short}</span>
+                  <ChevronLeft size={24} />
                 </button>
-              ))}
+                <div className="catalog-indicators">
+                  {soluciones.map((_, index) => (
+                    <span key={index} className={`catalog-dot ${activeTab === index ? 'active' : ''}`} />
+                  ))}
+                </div>
+                <button 
+                  className="catalog-btn" 
+                  onClick={() => setActiveTab((prev) => (prev + 1) % soluciones.length)}
+                  aria-label="Siguiente"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </div>
             </div>
 
             <div className="solutions-viewport">
@@ -209,19 +220,24 @@ function App() {
                 className="card sol-modern-card animate-fade-in"
               >
                 <div className={`card-inner-flex ${soluciones[activeTab].image ? 'has-image' : ''}`}>
-                  {soluciones[activeTab].image && (
+                  {soluciones[activeTab].image ? (
                     <div className="card-image-container">
                       <div className="image-overlay-scanline"></div>
                       <img src={soluciones[activeTab].image} alt={soluciones[activeTab].title} className="card-image" />
                       <div className="image-glow-accent"></div>
                     </div>
+                  ) : (
+                    <div className="card-image-placeholder">
+                      <div className="placeholder-icon">{soluciones[activeTab].icon}</div>
+                      <span>Imagen en preparación</span>
+                    </div>
                   )}
                   <div className="card-content">
                     <div className="card-title-row">
                       <div className="card-icon" style={{ color: 'var(--accent-bright)' }}>{soluciones[activeTab].icon}</div>
-                      <h3 style={{ fontSize: '1.6rem', color: '#FAFAFA', fontWeight: '600', letterSpacing: '-0.02em' }}>{soluciones[activeTab].title}</h3>
+                      <h3 style={{ fontSize: '1.8rem', color: '#FAFAFA', fontWeight: '600', letterSpacing: '-0.02em' }}>{soluciones[activeTab].title}</h3>
                     </div>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.7', marginTop: '1.25rem' }}>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', lineHeight: '1.8', marginTop: '1.5rem' }}>
                       {soluciones[activeTab].desc}
                     </p>
                   </div>

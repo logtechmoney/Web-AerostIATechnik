@@ -420,88 +420,77 @@ body {
   align-items: center;
 }
 
-.solutions-minimal-nav {
+.catalog-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
   width: 100%;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  margin-bottom: 2rem;
 }
 
-.sol-dot-item {
-  background: none;
-  border: none;
+.catalog-subtitle {
+  font-size: 1.1rem;
+  color: var(--accent-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.catalog-controls {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-  opacity: 0.4;
+  gap: 2rem;
 }
 
-.sol-dot-item .dot {
-  width: 6px;
-  height: 6px;
-  background: var(--text-muted);
+.catalog-btn {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #FAFAFA;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.sol-dot-item .label {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
+.catalog-btn:hover {
+  background: var(--accent-bright);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  transform: scale(1.05);
 }
 
-.sol-dot-item:hover,
-.sol-dot-item.active {
-  opacity: 1;
+.catalog-indicators {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.sol-dot-item.active .dot {
+.catalog-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.catalog-dot.active {
   background: var(--accent-bright);
   transform: scale(1.5);
-  box-shadow: 0 0 10px var(--accent-bright);
-}
-
-.sol-dot-item.active .label {
-  color: #fff;
+  opacity: 1;
+  box-shadow: 0 0 8px var(--accent-bright);
 }
 
 @media (max-width: 768px) {
-  .solutions-minimal-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-    padding: 0 0 1rem 0;
-    border-bottom: 1px solid rgba(16, 185, 129, 0.1);
-  }
-
-  .sol-dot-item {
-    justify-content: center;
-    padding: 0.4rem;
-    background: rgba(16, 185, 129, 0.05);
-    border-radius: 4px;
-    opacity: 0.5;
-  }
-
-  .sol-dot-item.active {
-    background: rgba(16, 185, 129, 0.15);
-    opacity: 1;
-  }
-
-  .sol-dot-item .dot {
-    display: none;
-  }
-
-  .sol-dot-item .label {
-    font-size: 0.65rem;
+  .catalog-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
 }
 
@@ -513,6 +502,9 @@ body {
 
 .sol-modern-card {
   width: 100%;
+  min-height: 520px;
+  display: flex !important;
+  align-items: center;
   background: rgba(6, 15, 10, 0.4) !important;
   border: 1px solid rgba(16, 185, 129, 0.15) !important;
   padding: 3rem !important;
@@ -532,6 +524,7 @@ body {
   display: flex;
   gap: 3.5rem;
   align-items: center;
+  width: 100%;
 }
 
 .card-inner-flex.has-image {
@@ -544,10 +537,11 @@ body {
   }
 }
 
-.card-image-container {
-  flex: 0 0 48%;
-  max-width: 48%;
-  height: 340px;
+.card-image-container,
+.card-image-placeholder {
+  flex: 0 0 58%;
+  max-width: 58%;
+  height: 420px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(16, 185, 129, 0.3);
@@ -557,6 +551,21 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(4, 9, 6, 0.6);
+}
+
+.card-image-placeholder {
+  flex-direction: column;
+  gap: 1rem;
+  color: rgba(16, 185, 129, 0.4);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-image-placeholder .placeholder-icon {
+  opacity: 0.3;
+  transform: scale(2);
+  margin-bottom: 1rem;
 }
 
 .image-overlay-scanline {
