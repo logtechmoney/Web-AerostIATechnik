@@ -583,22 +583,21 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1), filter 1.2s ease;
-  filter: brightness(0.9) contrast(1.1);
+  position: relative;
+  z-index: 10;
+  border-radius: 16px;
 }
 
 .sol-modern-card:hover .card-image {
-  transform: scale(1.06);
-  filter: brightness(1.1) contrast(1.15);
+  transform: scale(1.02);
 }
 
 .card-image-container::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, transparent 40%, transparent 60%, rgba(16, 185, 129, 0.1) 100%);
   pointer-events: none;
-  z-index: 4;
+  z-index: 15;
 }
 
 .card-title-row {
