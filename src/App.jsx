@@ -127,7 +127,7 @@ function App() {
         backgroundPosition: 'center',
         backgroundColor: 'transparent'
       }}>
-        <div className="hero-overlay"></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.95) 0%, rgba(6, 15, 10, 0.85) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Sectores que Transformamos</motion.h3>
