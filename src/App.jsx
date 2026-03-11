@@ -204,40 +204,29 @@ function App() {
             </div>
 
             <div className="solutions-viewport">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="card sol-modern-card"
-                >
-                  <div className={`card-inner-flex ${soluciones[activeTab].image ? 'has-image' : ''}`}>
-                    {soluciones[activeTab].image && (
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-                        className="card-image-container"
-                      >
-                        <div className="image-overlay-scanline"></div>
-                        <img src={soluciones[activeTab].image} alt={soluciones[activeTab].title} className="card-image" />
-                        <div className="image-glow-accent"></div>
-                      </motion.div>
-                    )}
-                    <div className="card-content">
-                      <div className="card-title-row">
-                        <div className="card-icon" style={{ color: 'var(--accent-bright)' }}>{soluciones[activeTab].icon}</div>
-                        <h3 style={{ fontSize: '1.6rem', color: '#FAFAFA', fontWeight: '600', letterSpacing: '-0.02em' }}>{soluciones[activeTab].title}</h3>
-                      </div>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.7', marginTop: '1.25rem' }}>
-                        {soluciones[activeTab].desc}
-                      </p>
+              <div
+                key={activeTab}
+                className="card sol-modern-card animate-fade-in"
+              >
+                <div className={`card-inner-flex ${soluciones[activeTab].image ? 'has-image' : ''}`}>
+                  {soluciones[activeTab].image && (
+                    <div className="card-image-container">
+                      <div className="image-overlay-scanline"></div>
+                      <img src={soluciones[activeTab].image} alt={soluciones[activeTab].title} className="card-image" />
+                      <div className="image-glow-accent"></div>
                     </div>
+                  )}
+                  <div className="card-content">
+                    <div className="card-title-row">
+                      <div className="card-icon" style={{ color: 'var(--accent-bright)' }}>{soluciones[activeTab].icon}</div>
+                      <h3 style={{ fontSize: '1.6rem', color: '#FAFAFA', fontWeight: '600', letterSpacing: '-0.02em' }}>{soluciones[activeTab].title}</h3>
+                    </div>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.7', marginTop: '1.25rem' }}>
+                      {soluciones[activeTab].desc}
+                    </p>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
             </div>
           </div>
         </div>
