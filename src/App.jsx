@@ -207,10 +207,10 @@ function App() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, y: 10, filter: 'blur(5px)' }}
-                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, y: -10, filter: 'blur(5px)' }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
                   className="card sol-modern-card"
                 >
                   <div className={`card-inner-flex ${soluciones[activeTab].image ? 'has-image' : ''}`}>
@@ -218,7 +218,7 @@ function App() {
                       <motion.div 
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                         className="card-image-container"
                       >
                         <div className="image-overlay-scanline"></div>
