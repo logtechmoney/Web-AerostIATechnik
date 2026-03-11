@@ -120,8 +120,15 @@ function App() {
 
       {/* CONTENIDO QUE SUBE SOBRE EL FONDO ESTATICO */}
 
-      <section className="section" id="industrias">
-        <div className="section-inner">
+      <section className="section" id="industrias" style={{
+        backgroundImage: 'url(/Industrias.png)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: 'transparent'
+      }}>
+        <div className="hero-overlay"></div>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Sectores que Transformamos</motion.h3>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Nuestras Industrias</motion.h2>
