@@ -11,7 +11,7 @@ function App() {
   const timerRef = useRef(null);
 
   const soluciones = [
-    { id: "mro", short: "MRO Aeronáutico", title: "Sistemas MRO Aeronáuticos", icon: <Terminal size={40} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
+    { id: "mro", short: "MRO Aeronáutico", title: "Sistemas MRO Aeronáuticos", image: "/MRO.png", icon: <Terminal size={40} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
     { id: "ecm", short: "Engine Monitoring", title: "Engine Condition Monitoring", icon: <Cpu size={40} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
     { id: "airport", short: "Gestión Aeroportuaria", title: "Gestión Aeroportuaria", icon: <Blocks size={40} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
     { id: "data", short: "Data Platforms", title: "Plataformas de Datos", icon: <Database size={40} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
@@ -214,10 +214,17 @@ function App() {
                   className="card sol-modern-card"
                 >
                   <div className="card-inner-flex">
-                    <div className="card-icon" style={{ color: 'rgba(16, 185, 129, 0.6)' }}>{soluciones[activeTab].icon}</div>
+                    {soluciones[activeTab].image && (
+                      <div className="card-image-container">
+                        <img src={soluciones[activeTab].image} alt={soluciones[activeTab].title} className="card-image" />
+                      </div>
+                    )}
                     <div className="card-content">
-                      <h3 style={{ fontSize: '1.35rem', marginBottom: '0.75rem', color: '#FAFAFA', fontWeight: '500' }}>{soluciones[activeTab].title}</h3>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                      <div className="card-title-row">
+                        <div className="card-icon" style={{ color: 'rgba(16, 185, 129, 0.6)' }}>{soluciones[activeTab].icon}</div>
+                        <h3 style={{ fontSize: '1.35rem', color: '#FAFAFA', fontWeight: '500' }}>{soluciones[activeTab].title}</h3>
+                      </div>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginTop: '1.25rem' }}>
                         {soluciones[activeTab].desc}
                       </p>
                     </div>
