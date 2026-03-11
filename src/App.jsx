@@ -127,7 +127,7 @@ function App() {
         backgroundPosition: 'center',
         backgroundColor: 'transparent'
       }}>
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Sectores que Transformamos</motion.h3>
@@ -139,8 +139,17 @@ function App() {
         </div>
       </section>
 
-      <section className="section" id="especializacion">
-        <div className="section-inner">
+      <section className="section" id="especializacion" style={{
+        backgroundImage: 'url(/Soluciones.png)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'transparent'
+      }}>
+        {/* Usamos un offset negativo para cubrir cualquier línea blanca residual en el fondo */}
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3
               initial={{ opacity: 0, y: 15 }}
@@ -231,8 +240,16 @@ function App() {
         </div>
       </section>
 
-      <section className="section" id="mision-vision">
-        <div className="section-inner">
+      <section className="section" id="mision-vision" style={{
+        backgroundImage: 'url(/Nosotros.png)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'transparent'
+      }}>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="grid-2">
             <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} className="mv-box">
               <h3 className="section-title-sm" style={{ color: 'var(--accent)', fontSize: '1.1rem' }}>Nuestra Misión</h3>
@@ -252,8 +269,16 @@ function App() {
         </div>
       </section>
 
-      <section className="section" id="proyectos">
-        <div className="section-inner">
+      <section className="section" id="proyectos" style={{
+        backgroundImage: 'url(/Proyectos.png)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'transparent'
+      }}>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Ejecución con Precisión</motion.h3>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Casos de Éxito</motion.h2>
