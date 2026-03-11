@@ -33,7 +33,7 @@ function App() {
     if (!isHovered) {
       timerRef.current = setInterval(() => {
         setActiveTab((prev) => (prev + 1) % soluciones.length);
-      }, 15000); // Cambia cada 15 segundos
+      }, 7500); // Cambia cada 7.5 segundos
     }
     return () => clearInterval(timerRef.current);
   }, [isHovered, soluciones.length]);
