@@ -16,7 +16,7 @@ function App() {
     { id: "airport", short: "Gestión Aeroportuaria", title: "Gestión Aeroportuaria", image: "/GA.png?v=2", icon: <Blocks size={40} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
     { id: "data", short: "Data Platforms", title: "Plataformas de Datos", image: "/DB.png?v=2", icon: <Database size={40} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
     { id: "drones", short: "Drones & Energy", title: "Drones & Oil/Gas", image: "/OG.png?v=2", icon: <Cloud size={40} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
-    { id: "safety", short: "Seguridad & Compliance", title: "Seguridad y Cumplimiento", icon: <Shield size={40} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
+    { id: "safety", short: "Seguridad & Compliance", title: "Seguridad y Cumplimiento", image: "/Seg.png?v=2", icon: <Shield size={40} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
   ];
 
   // EVITAR SCROLL CUANDO EL MENU ESTA ABIERTO
