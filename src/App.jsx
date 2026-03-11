@@ -125,9 +125,10 @@ function App() {
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundClip: 'padding-box',
         backgroundColor: 'transparent'
       }}>
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Sectores que Transformamos</motion.h3>
@@ -145,10 +146,10 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundClip: 'padding-box',
         backgroundColor: 'transparent'
       }}>
-        {/* Usamos un offset negativo para cubrir cualquier línea blanca residual en el fondo */}
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3
@@ -246,9 +247,10 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundClip: 'padding-box',
         backgroundColor: 'transparent'
       }}>
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="grid-2">
             <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} className="mv-box">
@@ -275,9 +277,10 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundClip: 'padding-box',
         backgroundColor: 'transparent'
       }}>
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)', top: '-5px', left: '-5px', right: '-5px', bottom: '-5px' }}></div>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header">
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm">Ejecución con Precisión</motion.h3>
