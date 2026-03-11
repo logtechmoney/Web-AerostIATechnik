@@ -12,8 +12,8 @@ function App() {
 
   const soluciones = [
     { id: "mro", short: "MRO Aeronáutico", title: "Sistemas MRO Aeronáuticos", image: "/MRO.png", icon: <Terminal size={40} strokeWidth={1.5} />, desc: "Plataformas seguras e integrales para mantenimiento y control de calidad operativa. Gestión de flotas, trazabilidad de componentes y cumplimiento normativo en tiempo real." },
-    { id: "ecm", short: "Engine Monitoring", title: "Engine Condition Monitoring", icon: <Cpu size={40} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
-    { id: "airport", short: "Gestión Aeroportuaria", title: "Gestión Aeroportuaria", icon: <Blocks size={40} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
+    { id: "ectm", short: "Engine Trend Monitoring", title: "Engine Condition Trend Monitoring", image: "/ECTM.png", icon: <Cpu size={40} strokeWidth={1.5} />, desc: "Análisis predictivo en tiempo real y tendencias de confiabilidad para flotas críticas. Monitoreo de parámetros térmicos y vibratorios para maximizar la vida útil del motor." },
+    { id: "airport", short: "Gestión Aeroportuaria", title: "Gestión Aeroportuaria", image: "/GA.png", icon: <Blocks size={40} strokeWidth={1.5} />, desc: "Sistemas de coordinación y monitoreo ininterrumpido a nivel infraestructura. Optimización de flujos operativos y seguridad en plataforma." },
     { id: "data", short: "Data Platforms", title: "Plataformas de Datos", icon: <Database size={40} strokeWidth={1.5} />, desc: "Centralización de información estratégica aerocomercial y toma de decisiones masiva. Business Intelligence aplicado a entornos de alta complejidad." },
     { id: "drones", short: "Drones & Energy", title: "Drones & Oil/Gas", icon: <Cloud size={40} strokeWidth={1.5} />, desc: "Software crítico automatizado para inspección industria energética exigiendo máxima precisión. Navegación autónoma en entornos hostiles." },
     { id: "safety", short: "Seguridad & Compliance", title: "Seguridad y Cumplimiento", icon: <Shield size={40} strokeWidth={1.5} />, desc: "Arquitecturas modernas alineadas a los más estrictos estándares de aviación mundial. Ciberseguridad industrial y auditoría técnica automatizada." },
@@ -33,7 +33,7 @@ function App() {
     if (!isHovered) {
       timerRef.current = setInterval(() => {
         setActiveTab((prev) => (prev + 1) % soluciones.length);
-      }, 5000); // Cambia cada 5 segundos
+      }, 15000); // Cambia cada 15 segundos
     }
     return () => clearInterval(timerRef.current);
   }, [isHovered, soluciones.length]);
@@ -147,72 +147,78 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
-        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
-        <div className="section-inner" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-header">
-            <motion.h3
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-150px" }}
-              transition={{ duration: 0.3 }}
-              className="section-title-sm"
-              style={{ fontSize: '0.8rem', letterSpacing: '0.2em', marginBottom: '0.5rem' }}
-            >
-              Ingeniería de Software para Entornos Críticos
-            </motion.h3>
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-150px" }}
-              transition={{ duration: 0.3, delay: 0.05 }}
-              className="section-title"
-              style={{ fontSize: '2rem', marginBottom: '1rem' }}
-            >
-              Soluciones Escalables Inteligentes
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-150px" }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', maxWidth: '650px', margin: '0 auto', textAlign: 'center' }}
-            >
-              Transformamos complejidad técnica en ventaja estratégica mediante ecosistemas digitales seguros y procesos centralizados de alto rendimiento.
-            </motion.p>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.95) 0%, rgba(6, 15, 10, 0.85) 100%)' }}></div>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1300px', width: '100%' }}>
+          
+          <div className="catalog-top-bar">
+            <div className="catalog-text-content">
+              <motion.h3
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.3 }}
+                className="section-title-sm"
+                style={{ textAlign: 'left', fontSize: '0.8rem', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--accent-bright)' }}
+              >
+                Ingeniería de Software para Entornos Críticos
+              </motion.h3>
+              <motion.h2
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.3, delay: 0.05 }}
+                className="section-title"
+                style={{ textAlign: 'left', fontSize: '2rem', marginBottom: '1.2rem', marginTop: 0, fontWeight: 500, color: 'rgba(250, 250, 250, 0.95)', letterSpacing: '-0.01em' }}
+              >
+                Soluciones Escalables Inteligentes
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-150px" }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.7', maxWidth: '650px', textAlign: 'left', margin: 0, opacity: 0.9 }}
+              >
+                Transformamos complejidad técnica en ventaja estratégica mediante ecosistemas digitales seguros y procesos centralizados de alto rendimiento.
+              </motion.p>
+            </div>
+
+            <div className="catalog-controls">
+              <button 
+                className="catalog-btn" 
+                onClick={() => setActiveTab((prev) => (prev === 0 ? soluciones.length - 1 : prev - 1))}
+                aria-label="Anterior"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <div className="catalog-indicators">
+                {soluciones.map((_, index) => (
+                  <span key={index} className={`catalog-dot ${activeTab === index ? 'active' : ''}`} />
+                ))}
+              </div>
+              <button 
+                className="catalog-btn" 
+                onClick={() => setActiveTab((prev) => (prev + 1) % soluciones.length)}
+                aria-label="Siguiente"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
 
           <div
             className="solutions-slider-wrapper"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{ marginTop: '2.5rem' }}
+            style={{ marginTop: '1.5rem' }}
           >
-            <div className="catalog-header">
-              <h4 className="catalog-subtitle">Explorador de Soluciones</h4>
-              <div className="catalog-controls">
-                <button 
-                  className="catalog-btn" 
-                  onClick={() => setActiveTab((prev) => (prev === 0 ? soluciones.length - 1 : prev - 1))}
-                  aria-label="Anterior"
-                >
-                  <ChevronLeft size={24} />
-                </button>
-                <div className="catalog-indicators">
-                  {soluciones.map((_, index) => (
-                    <span key={index} className={`catalog-dot ${activeTab === index ? 'active' : ''}`} />
-                  ))}
-                </div>
-                <button 
-                  className="catalog-btn" 
-                  onClick={() => setActiveTab((prev) => (prev + 1) % soluciones.length)}
-                  aria-label="Siguiente"
-                >
-                  <ChevronRight size={24} />
-                </button>
-              </div>
-            </div>
 
             <div className="solutions-viewport">
               <div
