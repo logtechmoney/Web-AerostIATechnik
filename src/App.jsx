@@ -465,6 +465,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              className="ecosystem-item"
               style={{ position: 'absolute', top: '5%', left: '5%', maxWidth: '260px' }}
             >
               {/* Línea conectora */}
@@ -510,6 +511,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="ecosystem-item"
               style={{ position: 'absolute', top: '5%', right: '5%', maxWidth: '260px' }}
             >
               <svg style={{ position: 'absolute', top: '100%', right: '50%', width: '70px', height: '70px', pointerEvents: 'none' }}>
@@ -554,6 +556,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="ecosystem-item"
               style={{ position: 'absolute', bottom: '5%', left: '5%', maxWidth: '260px' }}
             >
               <svg style={{ position: 'absolute', bottom: '100%', left: '50%', width: '70px', height: '60px', pointerEvents: 'none' }}>
@@ -598,6 +601,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
+              className="ecosystem-item"
               style={{ position: 'absolute', bottom: '5%', right: '5%', maxWidth: '260px' }}
             >
               <svg style={{ position: 'absolute', bottom: '100%', right: '50%', width: '70px', height: '60px', pointerEvents: 'none' }}>
@@ -704,7 +708,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
                 viewport={{ once: true, margin: "-150px" }}
                 transition={{ duration: 0.3, delay: 0.05 }}
                 className="section-title"
-                style={{ textAlign: 'left', fontSize: '2rem', marginBottom: '1.2rem', marginTop: 0, fontWeight: 500, color: '#fff', letterSpacing: '-0.01em' }}
+                style={{ textAlign: 'left', marginBottom: '1.2rem', marginTop: 0, fontWeight: 500, color: '#fff', letterSpacing: '-0.01em' }}
               >
                 Plataformas de Software Crítico
               </motion.h2>
@@ -798,7 +802,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)' }}>Nuestra Identidad</motion.h3>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Nosotros</motion.h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', maxWidth: '1240px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1240px', margin: '0 auto' }}>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2.2rem 1.8rem', textAlign: 'center', minHeight: '340px' }}>
               <div style={{ width: '72px', height: '72px', background: 'rgba(5, 150, 105, 0.1)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', border: '1px solid rgba(5, 150, 105, 0.2)' }}>
                 <img src="/logo.png" alt="AerostAI" style={{ width: '42px', height: '42px', objectFit: 'contain', filter: 'brightness(0) saturate(100%) invert(58%) sepia(84%) saturate(376%) hue-rotate(92deg) brightness(95%) contrast(92%)' }} />
@@ -1023,6 +1027,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               onClick={() => setActiveProject(1)}
+              className="project-card-mobile"
               style={{
                 position: 'absolute',
                 width: '600px',
@@ -1108,6 +1113,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               onClick={() => setActiveProject(0)}
+              className="project-card-mobile"
               style={{
                 position: 'absolute',
                 width: '600px',

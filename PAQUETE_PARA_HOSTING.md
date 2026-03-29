@@ -10,8 +10,8 @@ Sube el contenido de la carpeta `dist/` al directorio principal del hosting:
 /contenido_de_dist/
 ├── index.html
 ├── assets/
-│   ├── index-BnwBdwMs.css
-│   └── index-CTmfxCGH.js
+│   ├── index-BRM_ZOIs.css
+│   └── index-CBa0XthP.js
 ├── nombre.png
 ├── MRO.png
 ├── ECTM.png
