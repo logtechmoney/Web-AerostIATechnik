@@ -6,8 +6,8 @@
 DEPLOY/
 ├── index.html              ← Página principal
 ├── assets/
-│   ├── index-BRM_ZOIs.css     ← Estilos compilados (NO modificar)
-│   └── index-CBa0XthP.js      ← JavaScript compilado (NO modificar)
+│   ├── index-BBtU9aEM.css     ← Estilos compilados (NO modificar)
+│   └── index-BGQP2QTR.js      ← JavaScript compilado (NO modificar)
 ├── favicon.svg             ← Icono de pestaña (con fondo oscuro)
 ├── hero_bg.png             ← Imagen de fondo hero
 ├── fondo.png               ← Imagen de fondo secciones

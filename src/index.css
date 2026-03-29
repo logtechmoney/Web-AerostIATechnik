@@ -40,6 +40,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* FIX CRITICO IOS SAFARI: background-attachment: fixed rompe el compositor GPU y corta la pantalla al 50% */
+  * {
+    background-attachment: scroll !important;
+  }
+
   body {
     background: #040806 !important;
   }
