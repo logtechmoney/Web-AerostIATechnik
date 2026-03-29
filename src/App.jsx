@@ -198,20 +198,13 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
 
       {/* CONTENIDO QUE SUBE SOBRE EL FONDO ESTATICO */}
 
-      <section className="section" id="industrias" style={{
+      <section className="section section-full" id="industrias" style={{
         backgroundImage: 'url(/Industrias.png)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent',
-        minHeight: '100vh',
-        maxHeight: '100vh',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '2rem 4rem'
+        backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.92) 0%, rgba(6, 15, 10, 0.88) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
@@ -220,7 +213,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
             <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Nuestras Industrias</motion.h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem', marginBottom: '1rem' }}>
+          <div className="responsive-grid-2">
             {/* Aeronáutica y MRO */}
             <motion.div 
               initial={{ opacity: 0, y: 15 }} 
@@ -423,7 +416,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         </div>
       </section>
 
-      <section className="section" id="especializacion" style={{ background: 'linear-gradient(180deg, rgba(3, 8, 5, 0.98) 0%, rgba(6, 20, 12, 0.96) 100%)', minHeight: '100vh', maxHeight: '100vh', overflow: 'hidden', padding: '2rem 0', position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <section className="section section-full" id="especializacion" style={{ background: 'linear-gradient(180deg, rgba(3, 8, 5, 0.98) 0%, rgba(6, 20, 12, 0.96) 100%)', position: 'relative' }}>
         {/* Líneas decorativas de fondo - más sutiles */}
         <div style={{ position: 'absolute', top: '45%', left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent)' }}></div>
         
@@ -437,7 +430,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
           </div>
 
           {/* Layout tipo "Ecosistema" */}
-          <div style={{ position: 'relative', height: '450px', width: '100%', maxWidth: '1200px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <div className="ecosystem-container">
             
             {/* Centro - Núcleo del ecosistema */}
             <motion.div 
@@ -445,6 +438,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="ecosystem-core"
               style={{
                 position: 'absolute',
                 width: '120px',
@@ -680,19 +674,14 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         </div>
       </section>
 
-      <section className="section" id="plataformas" style={{
+      <section className="section section-full" id="plataformas" style={{
         backgroundImage: 'url(/Soluciones.png)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.95) 0%, rgba(6, 15, 10, 0.85) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1300px', width: '100%' }}>
@@ -794,20 +783,17 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         </div>
       </section>
 
-      <section className="section" id="mision-vision" style={{
+      <section className="section section-full" id="mision-vision" style={{
         backgroundImage: 'url(/Nosotros.png)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent',
-        minHeight: '100vh',
-        maxHeight: '100vh',
-        overflow: 'hidden'
+        backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
-        <div className="section-inner" style={{ position: 'relative', zIndex: 1, padding: '0', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1, padding: '0', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)' }}>Nuestra Identidad</motion.h3>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Nosotros</motion.h2>
@@ -848,11 +834,9 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
             whileInView={{ opacity: 1, y: 0 }} 
             viewport={{ once: true }} 
             transition={{ duration: 0.5, delay: 0.3 }}
+            className="stats-grid"
             style={{ 
               marginTop: '2rem',
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '1.5rem',
               maxWidth: '1000px',
               margin: '2rem auto 0',
               padding: '0 2rem'
@@ -906,20 +890,14 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         </div>
       </section>
 
-      <section className="section" id="proyectos" style={{
+      <section className="section section-full" id="proyectos" style={{
         backgroundImage: 'url(/Proyectos.png)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent',
-        minHeight: '100vh',
-        maxHeight: '100vh',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
+        backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.92) 0%, rgba(6, 15, 10, 0.88) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
@@ -932,6 +910,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
 
           {/* Contenedor de cartas apiladas */}
           <div 
+            className="project-slider-mobile"
             style={{ 
               position: 'relative', 
               height: '580px',
@@ -958,6 +937,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               onClick={() => setActiveProject(2)}
+              className="project-card-mobile"
               style={{
                 position: 'absolute',
                 width: '600px',
@@ -982,7 +962,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               </div>
 
               {/* Ficha Técnica */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.6rem', marginBottom: '1.2rem', padding: '0.85rem', background: 'rgba(255, 255, 255, 0.04)', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+              <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.6rem', marginBottom: '1.2rem', padding: '0.85rem', background: 'rgba(255, 255, 255, 0.04)', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
                 <div>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.6rem', margin: '0 0 0.25rem', textTransform: 'uppercase', fontWeight: '600' }}>Cliente</p>
                   <p style={{ color: '#fff', fontSize: '0.75rem', margin: 0, fontWeight: '500' }}>Taller MRO</p>
@@ -1011,7 +991,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
                 <p style={{ color: '#fff', fontSize: '0.88rem', lineHeight: '1.55', margin: 0 }}>Ecosistema digital integral para gestión MRO: control de herramientas calibradas con alertas automáticas, gestión digital de Capability Lists y trazabilidad completa de componentes.</p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.6rem', marginBottom: '0.85rem' }}>
+              <div className="impact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.6rem', marginBottom: '0.85rem' }}>
                 <div style={{ textAlign: 'center', padding: '0.6rem', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
                   <p style={{ color: 'var(--accent)', fontSize: '1.15rem', margin: '0 0 0.15rem', fontWeight: '700' }}>25%</p>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.6rem', margin: 0, textTransform: 'uppercase' }}>Reducción TAT</p>
@@ -1273,19 +1253,14 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         </div>
       </section>
 
-      <section className="section" id="contacto" style={{
+      <section className="section section-full" id="contacto" style={{
         backgroundImage: 'url(/Contacto.png)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'padding-box',
-        backgroundColor: 'transparent',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: '1400px', padding: '0 2rem' }}>
@@ -1297,7 +1272,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2.5rem', alignItems: 'start', maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2.5rem', alignItems: 'start', maxWidth: '1200px', margin: '0 auto' }}>
             
             {/* Columna izquierda: Formulario */}
             <div>
