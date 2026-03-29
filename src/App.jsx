@@ -130,8 +130,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         }
       });
     }, {
-      // Ajuste de margen para detectar mejor la sección activa al centro de la pantalla
-      rootMargin: '-20% 0% -60% 0%',
+      rootMargin: '-40% 0% -55% 0%',
       threshold: 0
     });
 
@@ -209,8 +208,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.92) 0%, rgba(6, 15, 10, 0.88) 100%)' }}></div>
         <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
           <div className="section-header" style={{ marginBottom: '1.5rem' }}>
-            <motion.h3 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ fontSize: '0.8rem', marginBottom: '0.5rem' }}>Sectores que Transformamos</motion.h3>
-            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Nuestras Industrias</motion.h2>
+            <motion.h3 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ marginBottom: '0.5rem' }}>Sectores que Transformamos</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ marginBottom: '0.5rem' }}>Nuestras Industrias</motion.h2>
           </div>
 
           <div className="responsive-grid-2">
@@ -420,10 +419,10 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         {/* Líneas decorativas de fondo - más sutiles */}
         <div style={{ position: 'absolute', top: '45%', left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent)' }}></div>
         
-        <div className="section-inner" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="section-inner" style={{ maxWidth: '1400px', margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div className="section-header" style={{ marginBottom: '2rem', textAlign: 'center', flexShrink: 0 }}>
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)' }}>Arquitectura de Software</motion.h3>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ fontSize: '2.2rem', margin: '0.5rem 0' }}>Soluciones Tecnológicas</motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ margin: '0.4rem 0' }}>Soluciones Tecnológicas</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '550px', margin: '0.5rem auto 0' }}>
               Ecosistema integrado de <span style={{ color: 'var(--accent)' }}>inteligencia artificial</span> aplicada a operaciones críticas
             </motion.p>

@@ -428,13 +428,19 @@ body {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.7rem !important;
+    font-size: 1.4rem !important;
     line-height: 1.2;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .section-title-sm {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .section-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem !important;
   }
 }
 
@@ -946,7 +952,6 @@ body {
     max-width: calc(100vw - 2rem) !important;
     height: auto !important;
     transform: none !important;
-    rotateY: none !important;
     opacity: 1 !important;
     margin: 0 auto 1.5rem auto !important;
     padding: 1.25rem !important;
@@ -977,5 +982,92 @@ body {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
+  }
+}
+
+/* =====================================================
+   MOBILE GLOBAL: reducir texto de párrafo y espaciado
+   ===================================================== */
+@media (max-width: 768px) {
+  /* Párrafos generales más compactos */
+  .section p, section p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Ecosistema: convertir en grilla 2x2 compacta */
+  .ecosystem-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+    height: auto !important;
+    padding: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .ecosystem-core {
+    grid-column: 1 / -1 !important;
+    position: relative !important;
+    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 0.5rem auto !important;
+    order: -1;
+  }
+
+  .ecosystem-item {
+    position: relative !important;
+    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+    transform: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .ecosystem-item > div {
+    padding: 0.85rem !important;
+  }
+
+  .ecosystem-item h3 {
+    font-size: 0.8rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .ecosystem-item p {
+    font-size: 0.72rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Esconder los SVG conectores en mobile */
+  .ecosystem-container > svg,
+  .ecosystem-item > svg {
+    display: none !important;
+  }
+
+  /* El icono flotante dentro de ecosystem-item */
+  .ecosystem-item > div > div:first-child {
+    width: 36px !important;
+    height: 36px !important;
+    top: -14px !important;
+  }
+
+  /* Plataformas: reducir el header del catalog */
+  .catalog-top-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .solutions-slider-wrapper {
+    gap: 1rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* Reducir padding section interna en móvil */
+  .section {
+    padding: 3.5rem 1rem !important;
   }
 }
