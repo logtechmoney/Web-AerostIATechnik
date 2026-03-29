@@ -59,7 +59,7 @@ ${contactForm.message}
 
 ---
 Este mensaje fue enviado desde el formulario de contacto oficial de AerostAI Technik
-Sitio web: https://aerostaitechnik.com
+Sitio web: https://aerostaitechnik.com.ar
 Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' })}`);
       formData.append('_replyto', contactForm.email);
       formData.append('_template', 'table');
@@ -1541,8 +1541,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
                     Correos electrónicos:
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                    <a href="mailto:info-support@aerostaitechnik.com" style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.9rem' }}>
-                      info-support@aerostaitechnik.com
+                    <a href="mailto:info-support@aerostaitechnik.com.ar" style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.9rem' }}>
+                      info-support@aerostaitechnik.com.ar
                     </a>
                     <a href="mailto:info@aerostaitechnik.com.ar" style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.9rem' }}>
                       info@aerostaitechnik.com.ar

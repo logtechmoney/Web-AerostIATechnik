@@ -49,7 +49,7 @@ Listo! El sitio funcionará automáticamente en cualquier URL:
 
 ## 🌟 CARACTERÍSTICAS LISTAS:
 
-- 🚀 **Formulario funcional**: Envía a info@aerostaitechnik.com.ar
+- 🚀 **Formulario funcional**: Envía a info@aerostaitechnik.com.ar.ar
 - 📱 **100% Responsive**: Celulares, tablets, desktop
 - ⚡ **Ultra optimizado**: Carga en segundos
 - 🎨 **Diseño profesional**: Animaciones suaves
@@ -66,4 +66,4 @@ Listo! El sitio funcionará automáticamente en cualquier URL:
 
 Tu socio solo necesita subir los archivos y funciona. Cero configuración técnica necesaria.
 
-**URL de ejemplo**: `https://aerostaitechnik.com`
+**URL de ejemplo**: `https://aerostaitechnik.com.ar`
