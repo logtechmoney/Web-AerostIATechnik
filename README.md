@@ -25,8 +25,6 @@ DEPLOY/
 ├── Proyectos.png           ← Imagen sección Proyectos
 ├── taller01.png            ← Imagen Casos de Éxito 1
 ├── taller02.png            ← Imagen Casos de Éxito 2
-├── video.mp4               ← Video de fondo
-├── video02.mp4             ← Video adicional
 └── version.json            ← Versión del sitio
 ```
 
@@ -48,7 +46,6 @@ Abrir en navegador:
 ### Paso 3: Probar Funcionalidades
 - [ ] Formulario de contacto envía emails
 - [ ] Navegación entre secciones funciona
-- [ ] Videos de fondo se reproducen
 - [ ] Imágenes se cargan correctamente
 - [ ] Favicon aparece en la pestaña del navegador
 
@@ -61,7 +58,6 @@ Abrir en navegador:
 - ✅ **Navegación**: Funciona en cualquier dominio
 - ✅ **Animaciones**: Framer Motion optimizado
 - ✅ **Responsive**: Adaptado a móviles, tablets y desktop
-- ✅ **Videos**: Optimizados para web
 - ✅ **Favicon**: Diseño con fondo oscuro visible
 
 ---
@@ -139,9 +135,6 @@ El formulario usa FormSubmit.co (servicio gratuito). Puede tardar 1-2 min en act
 ### Si el favicon no aparece:
 - Limpiar caché del navegador (Ctrl+F5)
 - Verificar que `favicon.svg` esté en la raíz
-
-### Si los videos no cargan:
-Algunos hostings tienen límites de tamaño. Los videos son opcionales.
 
 ---
 
