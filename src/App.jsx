@@ -697,7 +697,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
                 viewport={{ once: true, margin: "-150px" }}
                 transition={{ duration: 0.3 }}
                 className="section-title-sm"
-                style={{ textAlign: 'left', fontSize: '0.8rem', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--accent)' }}
+                style={{ textAlign: 'left', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--accent)' }}
               >
                 Ingeniería de Software para Entornos Críticos
               </motion.h3>
@@ -796,36 +796,36 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.9) 0%, rgba(6, 15, 10, 0.75) 100%)' }}></div>
-        <div className="section-inner" style={{ position: 'relative', zIndex: 1, padding: '0', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
             <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)' }}>Nuestra Identidad</motion.h3>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title">Nosotros</motion.h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1240px', margin: '0 auto' }}>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2.2rem 1.8rem', textAlign: 'center', minHeight: '340px' }}>
-              <div style={{ width: '72px', height: '72px', background: 'rgba(5, 150, 105, 0.1)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', border: '1px solid rgba(5, 150, 105, 0.2)' }}>
+          <div className="nosotros-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', maxWidth: '1240px', margin: '0 auto', width: '100%' }}>
+            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3 }} className="nosotros-card">
+              <div className="nosotros-icon">
                 <img src="/logo.png" alt="AerostAI" style={{ width: '42px', height: '42px', objectFit: 'contain', filter: 'brightness(0) saturate(100%) invert(58%) sepia(84%) saturate(376%) hue-rotate(92deg) brightness(95%) contrast(92%)' }} />
               </div>
-              <h3 style={{ color: 'var(--accent)', fontSize: '1.1rem', marginBottom: '0.9rem', fontWeight: '600' }}>Quienes Somos</h3>
-              <p style={{ fontSize: '1rem', color: 'var(--text-main)', lineHeight: '1.65' }}>
+              <h3 className="nosotros-h3">Quienes Somos</h3>
+              <p className="nosotros-p">
                 Somos AerostAI TECHNIK, empresa argentina especializada en ingeniería de software crítico para industrias de alta exigencia. Combinamos experiencia técnica con innovación para desarrollar soluciones que marcan la diferencia en operaciones críticas del sector aeronáutico y energético.
               </p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3, delay: 0.1 }} style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2.2rem 1.8rem', textAlign: 'center', minHeight: '340px' }}>
-              <div style={{ width: '72px', height: '72px', background: 'rgba(5, 150, 105, 0.1)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', border: '1px solid rgba(5, 150, 105, 0.2)' }}>
+            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3, delay: 0.1 }} className="nosotros-card">
+              <div className="nosotros-icon">
                 <Target size={42} strokeWidth={1.7} style={{ color: 'rgba(5, 150, 105, 0.8)' }} />
               </div>
-              <h3 style={{ color: 'var(--accent)', fontSize: '1.1rem', marginBottom: '0.9rem', fontWeight: '600' }}>Nuestra Misión</h3>
-              <p style={{ fontSize: '1rem', color: 'var(--text-main)', lineHeight: '1.65' }}>
-                Diseñar y desarrollar soluciones de ingeniería de software para sectores aeronáutico y Oil & Gas, integrando datos críticos y optimizando procesos para fortalecer la toma de decisiones con seguridad operacional.
+              <h3 className="nosotros-h3">Nuestra Misión</h3>
+              <p className="nosotros-p">
+                Diseñar y desarrollar soluciones de software para sectores aeronáutico y Oil &amp; Gas, integrando datos críticos y optimizando procesos para fortalecer la toma de decisiones con seguridad operacional.
               </p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3, delay: 0.2 }} style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '2.2rem 1.8rem', textAlign: 'center', minHeight: '340px' }}>
-              <div style={{ width: '72px', height: '72px', background: 'rgba(5, 150, 105, 0.1)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', border: '1px solid rgba(5, 150, 105, 0.2)' }}>
+            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-150px" }} transition={{ duration: 0.3, delay: 0.2 }} className="nosotros-card">
+              <div className="nosotros-icon">
                 <Eye size={42} strokeWidth={1.7} style={{ color: 'rgba(5, 150, 105, 0.8)' }} />
               </div>
-              <h3 style={{ color: 'var(--accent)', fontSize: '1.1rem', marginBottom: '0.9rem', fontWeight: '600' }}>Nuestra Visión</h3>
-              <p style={{ fontSize: '1rem', color: 'var(--text-main)', lineHeight: '1.65' }}>
+              <h3 className="nosotros-h3">Nuestra Visión</h3>
+              <p className="nosotros-p">
                 Ser referentes en ingeniería de software aplicada a entornos de alta exigencia, reconocidos por desarrollar soluciones precisas y confiables que impulsen operaciones más inteligentes y seguras.
               </p>
             </motion.div>
@@ -841,8 +841,7 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
             style={{ 
               marginTop: '2rem',
               maxWidth: '1000px',
-              margin: '2rem auto 0',
-              padding: '0 2rem'
+              margin: '2rem auto 0'
             }}
           >
             <div style={{ 
@@ -853,8 +852,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               border: '1px solid rgba(5, 150, 105, 0.2)',
               borderRadius: '12px'
             }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#E8E4D9', marginBottom: '0.3rem' }}>6+</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Años de Trayectoria</div>
+              <div className="stat-number">6+</div>
+              <div className="stat-label">Años de Trayectoria</div>
             </div>
             <div style={{ 
               textAlign: 'center', 
@@ -864,8 +863,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               border: '1px solid rgba(5, 150, 105, 0.2)',
               borderRadius: '12px'
             }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#E8E4D9', marginBottom: '0.3rem' }}>30+</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Proyectos Acumulados</div>
+              <div className="stat-number">30+</div>
+              <div className="stat-label">Proyectos Acumulados</div>
             </div>
             <div style={{ 
               textAlign: 'center', 
@@ -875,8 +874,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               border: '1px solid rgba(5, 150, 105, 0.2)',
               borderRadius: '12px'
             }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#E8E4D9', marginBottom: '0.3rem' }}>4</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Industrias Atendidas</div>
+              <div className="stat-number">4</div>
+              <div className="stat-label">Industrias Atendidas</div>
             </div>
             <div style={{ 
               textAlign: 'center', 
@@ -886,8 +885,8 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
               border: '1px solid rgba(5, 150, 105, 0.2)',
               borderRadius: '12px'
             }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#E8E4D9', marginBottom: '0.3rem' }}>24/7</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Soporte Técnico</div>
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Soporte Técnico</div>
             </div>
           </motion.div>
         </div>
@@ -903,12 +902,12 @@ Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Bueno
         backgroundColor: 'transparent'
       }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(3, 8, 5, 0.92) 0%, rgba(6, 15, 10, 0.88) 100%)' }}></div>
-        <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
           
           {/* Header compacto */}
           <div className="section-header" style={{ marginBottom: '0.5rem', textAlign: 'center' }}>
-            <motion.h3 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)', fontSize: '0.75rem' }}>Ejecución con Precisión</motion.h3>
-            <motion.h2 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ fontSize: '1.8rem', margin: '0.3rem 0' }}>Casos de Éxito</motion.h2>
+            <motion.h3 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-title-sm" style={{ color: 'var(--accent)' }}>Ejecución con Precisión</motion.h3>
+            <motion.h2 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="section-title" style={{ margin: '0.3rem 0' }}>Casos de Éxito</motion.h2>
           </div>
 
           {/* Contenedor de cartas apiladas */}
